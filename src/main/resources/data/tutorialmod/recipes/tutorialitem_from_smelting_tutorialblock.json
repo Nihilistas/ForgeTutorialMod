@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "tutorialitem",
+  "ingredient": {
+    "item": "tutorialmod:tutorialblock"
+  },
+  "result": "tutorialmod:tutorialitem",
+  "experience": 0.7,
+  "cookingtime": 20
+}
