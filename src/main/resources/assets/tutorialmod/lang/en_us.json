@@ -1,5 +1,6 @@
 {
   "item.tutorialmod.tutorialitem": "Tutorial Item",
+  "item.tutorialmod.tutorialadvanceditem": "Tutorial Advanced Item",
 
   "block.tutorialmod.tutorialblock": "Tutorial Block",
   "block.tutorialmod.tutorialblock2": "Tutorial Block 2",
