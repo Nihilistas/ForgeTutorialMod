@@ -24,7 +24,7 @@ public class TutorialAdvancedItem extends Item
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
         if(player.level.isClientSide) return true;
 
-        entity.move(MoverType.PISTON, new Vec3(0,1,0));
+        entity.moveRelative(.5f, new Vec3(0,1,0));
 
         return true;
     }
