@@ -1,8 +1,10 @@
 package com.dohnpeckgames.tutorialmod.block;
 
 import com.dohnpeckgames.tutorialmod.TutorialMod;
+import com.dohnpeckgames.tutorialmod.block.custom.TutorialAdvancedBlock;
 import com.dohnpeckgames.tutorialmod.item.ModCreativeModeTab;
 import com.dohnpeckgames.tutorialmod.item.ModItems;
+import net.minecraft.client.tutorial.Tutorial;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -28,6 +30,11 @@ public class ModBlocks
     public static final RegistryObject<Block> TUTORIAL_BLOCK2 = registerBlock("tutorialblock2", ()->new Block(
             BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()),
             ModCreativeModeTab.TUTORIAL_MOD_TAB);
+
+    public static final RegistryObject<Block> TUTORIAL_ADVANCED_BLOCK = registerBlock("tutorialadvancedblock",
+            ()->new TutorialAdvancedBlock(BlockBehaviour.Properties.of(Material.METAL).strength(9f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_MOD_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
