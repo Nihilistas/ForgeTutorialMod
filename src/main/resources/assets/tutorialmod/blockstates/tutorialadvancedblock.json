@@ -1,22 +1,6 @@
 {
-  "defaults": {
-    "textures": {
-      "top": "tutorialmod:block/tutorialadvancedblock/tutorialadvancedblock_off_top",
-      "bottom": "minecraft:block/tutorialadvancedblock/tutorialadvancedblock_off_bottom",
-      "side": "minecraft:block/tutorialadvancedblock/tutorialadvancedblock_off_side"
-    },
-    "model": "tutorialmod:block/tutorialadvancedblock"
-  },
   "variants": {
-    "activated": {
-      "true": {
-        "textures": {
-          "top": "tutorialmod:block/tutorialadvancedblock/tutorialadvancedblock_on_top",
-          "bottom": "minecraft:block/tutorialadvancedblock/tutorialadvancedblock_on_bottom",
-          "side": "minecraft:block/tutorialadvancedblock/tutorialadvancedblock_on_side"
-        }
-      },
-      "false": {}
-    }
+    "activated=false":  { "model": "tutorialmod:block/tutorialadvancedblock_off" },
+    "activated=true":   { "model": "tutorialmod:block/tutorialadvancedblock_on" }
   }
 }
