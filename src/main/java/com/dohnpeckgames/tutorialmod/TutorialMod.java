@@ -2,6 +2,7 @@ package com.dohnpeckgames.tutorialmod;
 
 import com.dohnpeckgames.tutorialmod.block.ModBlocks;
 import com.dohnpeckgames.tutorialmod.item.ModItems;
+import com.dohnpeckgames.tutorialmod.particle.ModParticles;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +26,7 @@ public class TutorialMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModParticles.register(eventBus);
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in

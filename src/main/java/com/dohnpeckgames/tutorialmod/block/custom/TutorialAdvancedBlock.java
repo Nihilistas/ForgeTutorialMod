@@ -1,6 +1,6 @@
 package com.dohnpeckgames.tutorialmod.block.custom;
 
-import com.dohnpeckgames.tutorialmod.TutorialMod;
+import com.dohnpeckgames.tutorialmod.particle.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
@@ -11,13 +11,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.fml.common.Mod;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
-@Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID)
 public class TutorialAdvancedBlock extends Block
 {
     private static final AABB TOUCH_AABB = new AABB(0.0D, 0.0D, 0.0D, 1D, 0.25D, 1D);
@@ -79,12 +77,18 @@ public class TutorialAdvancedBlock extends Block
 
         if (!isOn && wasOn)
         {
-            //TODO change texture to unlit variant
-            //TODO stop particle system
-        } else if (isOn && !wasOn)
+            // stepped off
+        }
+        else if (isOn && !wasOn)
         {
-            //TODO change texture to lit variant
-            //TODO start particle system
+            // stepped on
+            ServerLevel sLevel = (ServerLevel) pLevel;
+            for(int i=0; i<360; i+=10)
+            {
+                sLevel.sendParticles(ModParticles.TUTORIAL_ADVANCED_BLOCK_PARTICLES.get(), pPos.getX() + .5d,
+                        pPos.getY() + 1d, pPos.getZ() + .5d, 1, Math.cos(i),
+                        0.1d, Math.sin(i), 0.8f);
+            }
         }
 
         if (isOn)
