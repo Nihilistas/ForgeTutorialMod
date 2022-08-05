@@ -1,9 +1,12 @@
 package com.dohnpeckgames.tutorialmod.block.custom;
 
 import com.dohnpeckgames.tutorialmod.particle.ModParticles;
+import com.dohnpeckgames.tutorialmod.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -57,13 +60,20 @@ public class TutorialAdvancedBlock extends Block
 
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
-        if (!pLevel.isClientSide)
+        if (pLevel.isClientSide) return;
+        if (ModTags.Entities.TUTORIAL_ADVANCED_BLOCK_BLACKLISTED.m_8110_(pEntity.getType())) return;
+        if (pEntity instanceof ItemEntity iEntity) {
+            var item = iEntity.getItem().getItem();
+            if (ModTags.Items.TUTORIAL_ADVANCED_BLOCK_BLACKLISTED.m_8110_(item)) return;
+
+            if (item instanceof BlockItem bItem)
+                if (ModTags.Blocks.TUTORIAL_ADVANCED_BLOCK_BLACKLISTED.m_8110_(bItem.getBlock())) return;
+        }
+
+        var isLit = pState.getValue(ACTIVATED);
+        if (!isLit)
         {
-            var isLit = pState.getValue(ACTIVATED);
-            if (!isLit)
-            {
-                this.checkPressed(pEntity, pLevel, pPos, pState, false);
-            }
+            this.checkPressed(pEntity, pLevel, pPos, pState, false);
         }
     }
 
