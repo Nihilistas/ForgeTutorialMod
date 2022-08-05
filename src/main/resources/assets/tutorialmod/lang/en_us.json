@@ -1,10 +1,15 @@
 {
   "item.tutorialmod.tutorialitem": "Tutorial Item",
   "item.tutorialmod.tutorialadvanceditem": "Tutorial Advanced Item",
+  "item.tutorialmod.tutorialfooditem": "Tutorial Food Item",
+  "item.tutorialmod.tutorialfuelitem": "Tutorial Fuel Item",
 
   "block.tutorialmod.tutorialblock": "Tutorial Block",
   "block.tutorialmod.tutorialblock2": "Tutorial Block 2",
   "block.tutorialmod.tutorialadvancedblock": "Tutorial Advanced Block",
 
-  "itemGroup.tutorialtab": "Tutorial Tab"
+  "itemGroup.tutorialtab": "Tutorial Tab",
+
+  "tooltip.tutorialmod.tutorialadvanceditem": "§7Hit things to make them go up!§r",
+  "tooltip.tutorialmod.tutorialadvancedblock": "§7Walk over me!§r"
 }
