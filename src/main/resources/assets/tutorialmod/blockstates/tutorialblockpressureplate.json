@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "tutorialmod:block/tutorialblockpressureplate" },
+    "powered=true": { "model": "tutorialmod:block/tutorialblockpressureplatedown" }
+  }
+}

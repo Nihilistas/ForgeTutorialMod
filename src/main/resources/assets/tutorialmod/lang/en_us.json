@@ -7,6 +7,15 @@
   "block.tutorialmod.tutorialblock": "Tutorial Block",
   "block.tutorialmod.tutorialblock2": "Tutorial Block 2",
   "block.tutorialmod.tutorialadvancedblock": "Tutorial Advanced Block",
+  "block.tutorialmod.tutorialblockslab": "Tutorial Block Slab",
+  "block.tutorialmod.tutorialblockstairs": "Tutorial Block Fence",
+  "block.tutorialmod.tutorialblockfence": "Tutorial Block Fence",
+  "block.tutorialmod.tutorialblockfencegate": "Tutorial Block Fence Gate",
+  "block.tutorialmod.tutorialblockwall": "Tutorial Block Wall",
+  "block.tutorialmod.tutorialblockdoor": "Tutorial Block Door",
+  "block.tutorialmod.tutorialblocktrapdoor": "Tutorial Block Trapdoor",
+  "block.tutorialmod.tutorialblockbutton": "Tutorial Block Button",
+  "block.tutorialmod.tutorialblockpressureplate": "Tutorial Block Pressure Plate",
 
   "itemGroup.tutorialtab": "Tutorial Tab",
 
